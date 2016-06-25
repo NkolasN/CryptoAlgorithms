@@ -1,7 +1,11 @@
 
 
  /**
-  * A toy implementation of RC4
+  * A toy implementation of RC4.
+  * This code is not to meant be used for securing
+  * information. Use the standard java libraries instead. 
+  * Code provided with no warranties and is not guaranteed
+  * to be free of errors.  
   * @author NkolasN
   *
   */
