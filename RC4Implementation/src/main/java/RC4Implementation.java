@@ -86,8 +86,8 @@
 	    ciphertext[c]= (byte) (plaintext[c] ^ k);
 
 	    }
-	    
-    	return ciphertext;
+
+	       return ciphertext;
 
 	}
 	   
