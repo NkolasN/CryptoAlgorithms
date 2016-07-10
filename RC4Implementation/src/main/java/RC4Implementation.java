@@ -11,8 +11,8 @@
   */
  public class RC4Implementation {
 	
-	private byte[] S=new byte[256];
-	private byte[] T=new byte[256];
+	private byte[] S = new byte[256];
+	private byte[] T = new byte[256];
 	
 	
 	/**
@@ -69,15 +69,15 @@
 	   
 	    byte[] ciphertext=new byte[plaintext.length];
 	    
-	    int i=0, j = 0;
-	    for(int c =0;c<plaintext.length;c++){
+	    int i = 0, j = 0;
+	    for(int c = 0;c<plaintext.length;c++){
 	    	i = i++ & 0xFF;
 	    	j = (j + S[i]) & 0xFF;
 	    	swap(i,j);
 	    	int t = (S[i] + S[j]) & 0xFF;
 	    	int k = S[t];
 
-	    ciphertext[c]= (byte) (plaintext[c] ^ k);
+	    ciphertext[c] = (byte) (plaintext[c] ^ k);
 
 	    }
 	       return ciphertext;
@@ -101,9 +101,9 @@
      	* @param index2
      	*/
     	private void swap(int index1,int index2){
-	    byte temp=S[index1];
-	    S[index1]=S[index2];
-	    S[index2]=temp;
+	    byte temp = S[index1];
+	    S[index1] = S[index2];
+	    S[index2] = temp;
 	   
    	}
    	
