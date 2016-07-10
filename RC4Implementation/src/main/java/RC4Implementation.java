@@ -21,7 +21,6 @@
 	 * @return None
 	 */
 	public RC4Implementation(byte[] key){
-		
 		validateKey(key);
 		initialise(key);
 		
@@ -40,7 +39,6 @@
 		} else{
 			return true;
 		}
-		
 	}
 	
 	
@@ -56,15 +54,12 @@
 		}
 
 		int j=0;
-
 		for(int i = 0;i<256;i++){
 			j = (j + (int)S[i] + T[i]) & 0xFF;
 			swap(i,j);
 		}
-		
 	}
 		
-
 	/**
 	 * Encrypts a plaintext
 	 * @param plaintext
@@ -73,8 +68,7 @@
 	public byte[] encrypt(byte[] plaintext){
 	   
 	    byte[] ciphertext=new byte[plaintext.length];
-	
-
+	    
 	    int i=0, j = 0;
 	    for(int c =0;c<plaintext.length;c++){
 	    	i = i++ & 0xFF;
@@ -86,24 +80,19 @@
 	    ciphertext[c]= (byte) (plaintext[c] ^ k);
 
 	    }
-
 	       return ciphertext;
-
 	}
 	   
-   
-   
+	   
     	/**
      	* Decrypts a ciphertext by calling encrypt
      	* @param ciphertext
      	* @return plaintext
      	*/
     	public byte[] decrypt(byte[] ciphertext){
-    		
 	    return encrypt(ciphertext);
 	   
 	}
-   
    
    
     	/**
@@ -112,12 +101,10 @@
      	* @param index2
      	*/
     	private void swap(int index1,int index2){
-    		
 	    byte temp=S[index1];
 	    S[index1]=S[index2];
 	    S[index2]=temp;
 	   
    	}
-
-   
+   	
  }
