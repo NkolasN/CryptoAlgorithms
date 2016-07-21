@@ -22,8 +22,6 @@ public class RC4ImplementationTest {
 	  SecureRandom secureRandom=new SecureRandom();
 	  secureRandom.nextBytes(key);
 	  plaintext = "hello world!".getBytes();
-
-
   }
   
   @Test
@@ -32,8 +30,6 @@ public class RC4ImplementationTest {
 	  byte[] ciphertext = new RC4Implementation(key).encrypt(plaintext);
 	  String decryptedPlaintext = new String(new RC4Implementation(key).decrypt((ciphertext)),"UTF-8");
 	  assertEquals("hello world!",decryptedPlaintext);
-
   }
   
-
 }
