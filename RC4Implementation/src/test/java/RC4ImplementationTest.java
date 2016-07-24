@@ -24,6 +24,7 @@ public class RC4ImplementationTest {
 	  plaintext = "hello world!".getBytes();
   }
   
+  
   @Test
   public void successfulEncryptionDecryption() throws UnsupportedEncodingException{
 	  
@@ -31,5 +32,6 @@ public class RC4ImplementationTest {
 	  String decryptedPlaintext = new String(new RC4Implementation(key).decrypt((ciphertext)),"UTF-8");
 	  assertEquals("hello world!",decryptedPlaintext);
   }
+  
   
 }
