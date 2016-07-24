@@ -23,7 +23,6 @@
 	public RC4Implementation(byte[] key){
 		validateKey(key);
 		initialise(key);
-		
 	}
 	
 	
@@ -41,7 +40,6 @@
 		}
 	}
 	
-	
 	/**
 	 * Initialise vectors S and T
 	 * @param key
@@ -53,12 +51,13 @@
 			T[i] = key[i % key.length];
 		}
 
-		int j=0;
+		int j = 0;
 		for(int i = 0;i<256;i++){
 			j = (j + (int)S[i] + T[i]) & 0xFF;
 			swap(i,j);
 		}
 	}
+	
 		
 	/**
 	 * Encrypts a plaintext
@@ -67,7 +66,7 @@
 	 */
 	public byte[] encrypt(byte[] plaintext){
 	   
-	    byte[] ciphertext=new byte[plaintext.length];
+	    byte[] ciphertext = new byte[plaintext.length];
 	    
 	    int i = 0, j = 0;
 	    for(int c = 0;c<plaintext.length;c++){
@@ -82,6 +81,7 @@
 	    }
 	       return ciphertext;
 	}
+	   
 	   
 	   
     	/**
@@ -104,7 +104,6 @@
 	    byte temp = S[index1];
 	    S[index1] = S[index2];
 	    S[index2] = temp;
-	   
    	}
    	
  }
