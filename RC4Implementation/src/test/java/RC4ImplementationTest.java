@@ -29,7 +29,7 @@ public class RC4ImplementationTest {
    public void successfulEncryptionDecryption() throws UnsupportedEncodingException{
       byte[] ciphertext = new RC4Implementation(key).encrypt(plaintext);
       String decryptedPlaintext = new String(new RC4Implementation(key).decrypt((ciphertext)),"UTF-8");
-      assertEquals("jhello world!",decryptedPlaintext);
+      assertEquals("hello world!",decryptedPlaintext);
    }
 
 }
