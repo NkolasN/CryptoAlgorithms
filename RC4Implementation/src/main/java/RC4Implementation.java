@@ -14,7 +14,6 @@
 	private byte[] S = new byte[256];
 	private byte[] T = new byte[256];
 	
-	
 	/**
 	 * Validates the key length and initialises vectors S and T 
 	 * @param  The private Key
@@ -83,7 +82,6 @@
 	}
 	   
 	   
-	   
     	/**
      	* Decrypts a ciphertext by calling encrypt
      	* @param ciphertext
@@ -93,7 +91,6 @@
 	    return encrypt(ciphertext);
 	   
 	}
-   
    
     	/**
      	* Swaps two values in the state vector S based on index values
